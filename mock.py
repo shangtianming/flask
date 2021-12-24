@@ -1,6 +1,9 @@
 from flask import request, jsonify
+from flask_cors import *
 from common import server, logging
 from common.common_api import common
+
+CORS(app=server, supports_credentials=True)
 
 server.register_blueprint(common)
 
