@@ -12,7 +12,7 @@ def login():
 
     if request.method == 'POST':
         data = request.get_json()
-        if data.get('username') == 'whitewall' and data.get('password') == '12356':
+        if data.get('username') == 'whitewall' and data.get('password') == '123456':
             return jsonify({'token': '你敢相信这是一个token？', 'msg': '登录成功'})
         else:
             return jsonify({'msg': '账号密码错误'})
